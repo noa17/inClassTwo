@@ -1,1 +1,60 @@
 /*All css for this project should be in this file only, not in the html file*/
+/*This was taken from W3 School for reference, http://www.w3schools.com/css/css3_animations.asp */
+@keyframes keyframeAssignmentTwo { 
+  0%   {background-color: red; left:0px; top:0px;}
+  25%  {background-color: orange; left:100px; top:0px;}
+  50%  {background-color: blue; left:100px; top:100px;}
+  75%  {background-color: green; left:0px; top:100px;}
+  100% {background-color: red; left:0px; top:0px;}
+}
+
+#firstDiv {
+	margin-right: 10em;
+  width: 7em;
+  height: 7em;
+  position: relative;
+  background-color: red;
+  font-weight: bold;
+  animation-name: keyframeAssignmentTwo;
+  animation-duration: 10s;
+}
+
+.div1 {
+	margin-top: -3em;
+	margin-left: 5em;
+  width: 10em;
+  height: 5em;
+  background-color: green;
+  font-weight: bold;
+  position: relative;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+}
+
+/*This code was also taken from W3 School, I changed the class names, but the syntax is theirs
+http://www.w3schools.com/css/css3_animations.asp */
+/* Safari 4.0 - 8.0 */
+#divFirst {-webkit-animation-timing-function: linear;}
+#divSecond {-webkit-animation-timing-function: ease;}
+#divThird {-webkit-animation-timing-function: ease-in;}
+#divFourth {-webkit-animation-timing-function: ease-out;}
+#divFifth {-webkit-animation-timing-function: ease-in-out;}
+
+/* Standard syntax */
+#divFirst {animation-timing-function: linear;}
+#divSecond {animation-timing-function: ease;}
+#divThird {animation-timing-function: ease-in;}
+#divFourth {animation-timing-function: ease-out;}
+#divFifth {animation-timing-function: ease-in-out;}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {left: 200px;}
+  to {left: 500px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  from {left: 200px;}
+  to {left: 500px;}
+}
